@@ -1,0 +1,13 @@
+{
+  "name": "Unilever",
+  "ticker": "ULVR.L",
+  "sector": "Consumer Staples",
+  "sub_sector": "FMCG",
+  "exchange": "LSE",
+  "currency": "GBp",
+  "country": "United Kingdom",
+  "financial": null,
+  "esg": null,
+  "sentiment": null,
+  "regulatory": null
+}

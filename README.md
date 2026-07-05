@@ -114,7 +114,7 @@ ESG_BI_Reporter/
 ### Financial Data (yfinance)
 - **What**: stock price history, market cap, revenue, operating margins, P/E ratio
 - **Coverage**: 2021–2026 (5-year window; ESG data before 2020 is sparse and inconsistent)
-- **Ticker examples**: Ørsted → `ORSTED.CO`, Unilever → `UL`, Nestlé → `NSRGY`, Tesla → `TSLA`
+- **Ticker examples**: Ørsted → `ORSTED.CO`, Unilever → `ULVR.L`, Nestlé → `NESN.SW`, Tesla → `TSLA`
 - **Free**: yes, no API key required
 
 ### ESG Data (multi-source with fallback chain)

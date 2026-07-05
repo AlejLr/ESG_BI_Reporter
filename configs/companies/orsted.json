@@ -1,0 +1,16 @@
+{
+  "name": "Ørsted",
+  "ticker": "ORSTED.CO",
+  "sector": "Energy",
+  "sub_sector": "Offshore Wind",
+  "exchange": "CPH",
+  "currency": "DKK",
+  "country": "Denmark",
+  "financial": {
+    "start_date": "2021-01-01",
+    "end_date": "2026-12-31"
+  },
+  "esg": null,
+  "sentiment": null,
+  "regulatory": null
+}

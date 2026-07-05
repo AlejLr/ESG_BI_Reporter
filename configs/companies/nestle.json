@@ -1,0 +1,13 @@
+{
+  "name": "Nestlé",
+  "ticker": "NESN.SW",
+  "sector": "Consumer Staples",
+  "sub_sector": "Food and Beverage",
+  "exchange": "SIX",
+  "currency": "CHF",
+  "country": "Switzerland",
+  "financial": null,
+  "esg": null,
+  "sentiment": null,
+  "regulatory": null
+}

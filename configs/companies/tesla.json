@@ -1,0 +1,13 @@
+{
+  "name": "Tesla",
+  "ticker": "TSLA",
+  "sector": "Consumer Discretionary",
+  "sub_sector": "Automotive and Energy",
+  "exchange": "NASDAQ",
+  "currency": "USD",
+  "country": "United States",
+  "financial": null,
+  "esg": null,
+  "sentiment": null,
+  "regulatory": null
+}
