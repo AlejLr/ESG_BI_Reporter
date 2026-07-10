@@ -168,6 +168,7 @@ Stored in `configs/companies/<company>.json`. Reviewed and updated annually (the
 
 ### Prerequisites
 - Python 3.10+
+- [uv](https://docs.astral.sh/uv/) (Python package manager)
 - Power BI Desktop (for dashboard development)
 - NewsAPI key (free tier at newsapi.org)
 
@@ -176,10 +177,8 @@ Stored in `configs/companies/<company>.json`. Reviewed and updated annually (the
 ```bash
 git clone https://github.com/AlejLr/ESG_BI_Reporter.git
 cd ESG_BI_Reporter
-python -m venv .venv
-.venv\Scripts\activate        # Windows
-# source .venv/bin/activate   # macOS/Linux
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 ```
 
 ### Configuration
@@ -198,16 +197,14 @@ OPEN_ESG_API_KEY=your_openESG_key_here   # optional, falls back gracefully
 ### Running the Pipeline
 
 ```bash
-# Full pipeline for a single company
-python -m src.pipeline --company orsted
+# Financial stage only (default)
+uv run python -m src.pipeline --company orsted
 
-# Individual stages
-python -m src.collectors.financial --company orsted
-python -m src.collectors.esg --company orsted
-python -m src.collectors.sentiment --company orsted
+# Specific stage
+uv run python -m src.pipeline --company orsted --stage financial
 
-# Generate case study export
-python -m src.exporters.case_study --company orsted
+# All implemented stages
+uv run python -m src.pipeline --company orsted --stage all
 ```
 
 Outputs land in `data/exports/orsted/` as CSV files ready for Power BI.
@@ -236,12 +233,12 @@ Each phase ends at a concrete, verifiable milestone. A phase is not complete unt
 
 **Milestone:** run the pipeline for Ørsted and get a clean financial CSV that can be visually verified against known data.
 
-- [ ] Full project scaffold (folders, entry point, `.env` handling)
-- [ ] Company config schema defined (JSON)
-- [ ] Ørsted config created (financial fields)
-- [ ] Financial collector (`src/collectors/financial.py`) using yfinance
-- [ ] Financial transformer (`src/transformers/financial.py`)
-- [ ] Ørsted financial CSV generated and verified
+- [x] Full project scaffold (folders, entry point, `.env` handling)
+- [x] Company config schema defined (JSON)
+- [x] Ørsted config created (financial fields)
+- [x] Financial collector (`src/collectors/financial.py`) using yfinance
+- [x] Financial transformer (`src/transformers/financial.py`)
+- [x] Ørsted financial CSV generated and verified
 
 ---
 

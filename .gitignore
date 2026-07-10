@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data: raw API responses and intermediate processed data are not tracked.
+# Clean exports (data/exports/) are tracked for portfolio demonstration purposes.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep

@@ -24,16 +24,21 @@ def run(company: str, stage: str) -> None:
         raw = collect_financial(company, config)
         processed = transform_financial(raw, config)
         out = export(processed, company, "financial")
-        print(f"[financial] {len(processed)} rows -> {out}")
+        print(f"[financial] complete -> {out}")
 
     if stage in ("esg", "all"):
-        raise NotImplementedError("ESG stage not yet implemented (Phase 3)")
+        if stage == "esg":
+            raise NotImplementedError("ESG stage not yet implemented (Phase 3)")
+        print("[esg] skipping (not yet implemented)")
 
     if stage in ("sentiment", "all"):
-        raise NotImplementedError("Sentiment stage not yet implemented (Phase 3)")
+        if stage == "sentiment":
+            raise NotImplementedError("Sentiment stage not yet implemented (Phase 3)")
+        print("[sentiment] skipping (not yet implemented)")
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="ESG Integrated Value Analyzer")
     parser.add_argument(
         "--company",
